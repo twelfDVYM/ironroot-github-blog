@@ -50,7 +50,7 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
                 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-gray-900"
               >
-                <span className="block">Turn Your GitHub</span>
+                <span className="block">Turn Your GitHub Repo</span>
                 <span className="block text-blue-600">Into a Beautiful Blog</span>
               </motion.h1>
               <motion.p 
@@ -75,7 +75,7 @@ export default function Home() {
                   View Demo Blog
                 </Link>
                 <a
-                  href="https://github.com/yourusername/nextjs-github-markdown-blog"
+                  href="https://github.com/Dicklesworthstone/nextjs-github-markdown-blog"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-lg font-medium rounded-xl text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-300"
@@ -154,7 +154,7 @@ export default function Home() {
               View Demo Blog
             </Link>
             <a
-              href="https://github.com/yourusername/nextjs-github-markdown-blog#readme"
+              href="https://github.com/Dicklesworthstone/nextjs-github-markdown-blog/blob/main/README.md"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-xl text-white hover:bg-blue-500 transition-colors duration-300"
