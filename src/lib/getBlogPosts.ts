@@ -30,7 +30,9 @@ export async function getBlogPosts(): Promise<BlogPostProps[]> {
   try {
     const headers: HeadersInit = {
       'Accept': 'application/vnd.github.v3+json',
-      'User-Agent': 'NextJS-Blog'
+      'User-Agent': 'NextJS-Blog',
+      'Cache-Control': 'no-cache',
+      'If-None-Match': '', // Bypass ETag caching        
     };
 
     // Add GitHub token if available
