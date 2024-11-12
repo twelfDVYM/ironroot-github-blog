@@ -368,7 +368,3 @@ This project is built with and inspired by:
 - [Tailwind CSS](https://tailwindcss.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - And many other open-source projects
-
----
-
-Made with ❤️ by [Your Name]
