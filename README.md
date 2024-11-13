@@ -9,7 +9,6 @@ A modern, feature-rich blogging platform that uses GitHub as a CMS. Transform yo
 - 🎨 Frontmatter for rich metadata and customization
 - 📑 Automatic category and tag organization
 - 📊 Reading time estimation
-- 🔍 Full-text search capabilities
 
 ### Design & UI
 - 🎯 Responsive, mobile-first design
