@@ -19,7 +19,7 @@ const ClientSideImage: React.FC<ClientSideImageProps> = (props) => {
         if (onError) {
           onError(e);
         } else {
-          e.currentTarget.src = '/images/placeholder.jpg';
+          e.currentTarget.src = 'https://twelfDVYM.github.io/Host/IronRootLogoWEB.jpg';
           console.error('Failed to load image:', props.src);
         }
       }}

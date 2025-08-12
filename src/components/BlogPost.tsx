@@ -8,7 +8,7 @@ import React from "react";
 import Link from "next/link";
 import { formatDate } from "@/utils/dateFormatter";
 import { BlogPostProps } from "@/lib/getBlogPosts";
-import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import RelatedPosts from "./RelatedPosts";
 import ErrorBoundary from "./ErrorBoundary";
 import ScrollProgressBar from "./ScrollProgressBar";
@@ -186,12 +186,12 @@ const BlogPost: React.FC<{
               <FaGithub size={24} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
             >
-              <FaTwitter size={24} />
+              <FaFacebook size={24} />
             </a>
             <a
               href="https://linkedin.com"
@@ -200,6 +200,14 @@ const BlogPost: React.FC<{
               className="text-gray-400 hover:text-white"
             >
               <FaLinkedin size={24} />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white"
+            >
+              <FaTwitter size={24} />
             </a>
           </div>
         </div>

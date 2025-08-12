@@ -2,6 +2,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Next.js GitHub Markdown Blog',
     images: [
       {
-        url: '/images/og-image.jpg', // Add your own OG image
+        url: 'https://twelfDVYM.github.io/host/IronRootLogoWEB.jpg', // Add your own OG image
         width: 1200,
         height: 630,
         alt: 'Next.js GitHub Markdown Blog',
@@ -43,6 +44,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      {/* <head>
+        <GoogleAnalytics gaId="G-YOUR-ID" />
+      </head> */}
       <body className={`${inter.className} bg-gray-50`}>
         {children}
       </body>

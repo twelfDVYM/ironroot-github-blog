@@ -87,7 +87,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       <ErrorBoundary fallback={
         <div className="container mx-auto px-4 py-8 text-center">
           <h1 className="text-2xl font-bold mb-4">Error Rendering Blog Post</h1>
-          <p>We&apos;re sorry, but an error occurred while trying to render this blog post.</p>
+          <p>Sorry, but an error occurred while trying to render this blog post.</p>
           <Link href="/blog" className="text-blue-500 hover:underline mt-4 inline-block">
             Return to Blog
           </Link>
