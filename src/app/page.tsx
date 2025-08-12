@@ -49,7 +49,7 @@ export default function Home() {
       className="min-h-screen bg-gradient-to-b from-blue-100 to-blue-50"
     >
       <header className="bg-gradient-to-b from-[#a0522d] to-[#c68642]">
-        <div id="contact-header" className="container px-4 py-2">
+        <div id="contact-header" className="container mx-auto px-4 py-2">
           <div
             id="info"
             className="flex flex-wrap items-center justify-between space-x-4 md:space-x-0 md:flex-row"
@@ -65,10 +65,10 @@ export default function Home() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="mailto:info@placeholder.co.za"
+              href="mailto:ironrootrockcraft@gmail.com?subject=IronRoot%20Enquiry"
               className="text-sm text-black hover:text-blue-800 mb-2 md:mb-0"
             >
-              info@placeholder.co.za
+              ironrootrockcraft@gmail.com
             </a>
             <a
               target="_blank"
