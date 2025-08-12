@@ -58,7 +58,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               href="tel:+27639434886"
-              className="text-sm text-black hover:text-gray-800 mb-2 md:mb-0 ml-4"
+              className="text-black hover:text-gray-800 mb-2 md:mb-0 ml-4"
             >
               +27 63 943 4886
             </a>
@@ -66,7 +66,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               href="mailto:ironrootrockcraft@gmail.com?subject=IronRoot%20Enquiry"
-              className="text-sm text-black hover:text-blue-800 mb-2 md:mb-0"
+              className="text-black hover:text-blue-800 mb-2 md:mb-0"
             >
               ironrootrockcraft@gmail.com
             </a>
@@ -74,7 +74,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               href="https://api.whatsapp.com/send?phone=27639434886&amp;text=I%20want%20to%20make%20rocks!"
-              className="text-sm text-black hover:text-green-800 mb-2 md:mb-0"
+              className="text-black hover:text-green-800 mb-2 md:mb-0"
             >
               Whatsapp
             </a>
@@ -90,7 +90,7 @@ export default function Home() {
           fill
           priority
           className="object-cover w-full h-full absolute inset-0 z-0"
-          style={{ opacity: 0.75 }}
+          style={{ opacity: 0.7 }}
         />
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-blue-100 to-blue-50 opacity-0" />
@@ -105,15 +105,20 @@ export default function Home() {
                   transition={{ duration: 0.5 }}
                   className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-gray-900"
                 >
-                  <span className="block text-[#c68642]">Turn Your Sand</span>
-                  <span className="block">Into a Beautiful Rock</span>
+                  <span className="block">
+                    Turn Your <span className="text-[#c68642]">Sand</span>
+                  </span>
+                  <span className="block">
+                    Into a Beautiful{" "}
+                    <span className="text-[#a0522d]">Rock</span>
+                  </span>
                 </motion.h1>
                 <Image
                   src="https://twelfDVYM.github.io/host/IronRootLogoWEB.jpg"
                   alt="Logo"
                   width={600}
                   height={600}
-                  className="mb-4 lg:mb-0 rounded-xl"
+                  className="mb-4 lg:mb-0 lg:ml-4 rounded-xl"
                   priority
                 />
               </div>
