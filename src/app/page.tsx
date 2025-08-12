@@ -48,7 +48,7 @@ export default function Home() {
       id="page-container"
       className="min-h-screen bg-gradient-to-b from-blue-100 to-blue-50"
     >
-      <div className="bg-gradient-to-b from-[#a0522d] to-[#c68642]">
+      <header className="bg-gradient-to-b from-[#a0522d] to-[#c68642]">
         <div id="contact-header" className="container px-4 py-2">
           <div
             id="info"
@@ -80,7 +80,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">

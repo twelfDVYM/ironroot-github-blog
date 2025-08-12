@@ -27,7 +27,7 @@ const Subscribe: React.FC = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="mailto:info@ironroot.co.za?subject=IronRoot%20Enquiry"
-            className="px-8 py-4 rounded-xl text-lg font-medium bg-white text-black hover:bg-amber-600 transition-colors duration-300"
+            className="px-8 py-4 rounded-xl text-lg font-medium bg-white text-black hover:bg-amber-700 transition-colors duration-300"
           >
             Email Us
           </a>

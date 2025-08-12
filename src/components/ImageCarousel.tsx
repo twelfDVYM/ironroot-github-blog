@@ -56,19 +56,6 @@ const ImageCarousel: React.FC = () => {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Prefetch all images (hidden) */}
-      {images.map((src, idx) => (
-        <Image
-          key={src + idx}
-          src={src}
-          alt={`Prefetch ${idx}`}
-          width={10}
-          height={10}
-          style={{ display: "none" }}
-          priority={false}
-          draggable={false}
-        />
-      ))}
       {/* Prev Button - hidden on mobile */}
       <button
         onClick={prev}
@@ -79,6 +66,19 @@ const ImageCarousel: React.FC = () => {
       </button>
       {/* Carousel Images */}
       <div className="flex w-full max-w-7xl justify-center items-center gap-4">
+        {/* Prefetch all images (hidden) */}
+        {images.map((src, idx) => (
+          <Image
+            key={src + idx}
+            src={src}
+            alt={`Prefetch ${idx}`}
+            width={10}
+            height={10}
+            style={{ display: "none" }}
+            priority={false}
+            draggable={false}
+          />
+        ))}
         {visibleImages.map((src, idx) => (
           <div
             key={src}
