@@ -1,6 +1,9 @@
 "use client";
+import React, { useState } from "react";
 import Image from "next/image";
-import { useState, useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const images = [
   "https://twelfDVYM.github.io/host/IronRoot1.jpg",
@@ -15,106 +18,110 @@ const images = [
   "https://twelfDVYM.github.io/host/IronRoot9.jpg",
 ];
 
+const Arrow = ({ className, style, onClick, direction }: any) => (
+  <button
+    type="button"
+    className={className}
+    style={{
+      ...style,
+      display: "block",
+      background: "#c68642",
+      borderRadius: "50%",
+      border: "none",
+      width: 35,
+      height: 35,
+      left: direction === "left" ? -45 : undefined,
+      right: direction === "right" ? -45 : undefined,
+    }}
+    onClick={onClick}
+    aria-label={direction === "left" ? "Previous" : "Next"}
+  >
+    {direction === "left" ? "‹" : "›"}
+  </button>
+);
+
 const ImageCarousel: React.FC = () => {
-  const [current, setCurrent] = useState(1); // Center image index
-  const touchStartX = useRef<number | null>(null);
-  const [isZoomed, setIsZoomed] = useState(false);
-
-  // Swipe handlers for mobile
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
+  const [modalOpen, setModalOpen] = useState(false);
+  const [focusedIdx, setFocusedIdx] = useState(0);
+  const settings = {
+    infinite: true,
+    speed: 700,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0px",
+    arrows: true,
+    swipe: true,
+    touchMove: true,
+    touchThreshold: 8,
+    accessibility: true,
+    focusOnSelect: true,
+    draggable: true,
+    nextArrow: <Arrow direction="right" />,
+    prevArrow: <Arrow direction="left" />,
+    afterChange: (current: number) => setFocusedIdx(current),
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+          arrows: false,
+        },
+      },
+    ],
   };
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
-    if (deltaX > 50) prev();
-    if (deltaX < -50) next();
-    touchStartX.current = null;
-  };
-
-  // Infinite scroll logic for prev/next
-  const prev = () => {
-    setIsZoomed(false);
-    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
-  const next = () => {
-    setIsZoomed(false);
-    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
-
-  // Get 3 images: left, center, right (with wrap-around)
-  const getVisibleImages = () => {
-    const leftIdx = (current - 1 + images.length) % images.length;
-    const rightIdx = (current + 1) % images.length;
-    return [images[leftIdx], images[current], images[rightIdx]];
-  };
-  const visibleImages = getVisibleImages();
 
   return (
-    <div
-      className="relative w-full max-w-7xl flex items-center justify-center"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
-      {/* Prev Button - hidden on mobile */}
-      <button
-        onClick={prev}
-        className="absolute -left-12 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100 hidden sm:block"
-        aria-label="Previous"
-      >
-        &#8592;
-      </button>
-      {/* Carousel Images */}
-      <div className="flex w-full max-w-7xl justify-center items-center gap-4">
-        {/* Prefetch all images (hidden) */}
+    <div className="w-full max-w-5xl mx-auto py-8">
+      <Slider {...settings}>
         {images.map((src, idx) => (
-          <Image
-            key={src + idx}
-            src={src}
-            alt={`Prefetch ${idx}`}
-            width={10}
-            height={10}
-            style={{ display: "none" }}
-            priority={false}
-            draggable={false}
-          />
+          <div key={src + idx} className="px-2">
+            <div
+              className={`rounded-xl overflow-hidden bg-white shadow-lg ${
+                idx === focusedIdx ? "cursor-pointer" : ""
+              }`}
+              onClick={() => {
+                if (idx === focusedIdx) setModalOpen(true);
+              }}
+            >
+              <Image
+                src={src}
+                alt={`Rock feature ${idx + 1}`}
+                width={600}
+                height={400}
+                className="object-cover w-full h-[400px] sm:h-[400px]"
+                //draggable={false}
+                priority={idx < 3}
+              />
+            </div>
+          </div>
         ))}
-        {visibleImages.map((src, idx) => (
-          <div
-            key={src}
-            className={`transition-all duration-700 ease-in-out will-change-transform ${
-              idx === 1
-                ? isZoomed
-                  ? "scale-150 z-20 shadow-2xl"
-                  : "scale-105 z-10 shadow-2xl"
-                : "scale-90 opacity-70 z-0"
-            } rounded-xl overflow-hidden bg-white`}
-            style={{
-              width: idx === 1 ? 500 : 400,
-              height: idx === 1 ? 400 : 300,
-              cursor: idx === 1 ? "pointer" : "default",
-            }}
-            onClick={idx === 1 ? () => setIsZoomed((z) => !z) : undefined}
-          >
+      </Slider>
+
+      {/* Modal for focused image */}
+      {modalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+          <div className="relative bg-white rounded-xl shadow-2xl p-4 max-w-3xl w-full">
+            <button
+              className="absolute top-2 right-2 text-2xl text-gray-700 hover:text-black"
+              onClick={() => setModalOpen(false)}
+              aria-label="Close"
+              tabIndex={0}
+            >
+              &times;
+            </button>
             <Image
-              src={src}
-              alt={`Rock feature ${current - 1 + idx + 1}`}
-              width={500}
-              height={400}
-              className="object-cover w-full h-full"
+              src={images[focusedIdx]}
+              alt={`Rock feature focused`}
+              width={1200}
+              height={900}
+              className="object-cover w-full h-auto rounded-lg"
               draggable={false}
             />
           </div>
-        ))}
-      </div>
-      {/* Next Button - hidden on mobile */}
-      <button
-        onClick={next}
-        className="absolute -right-12 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow hover:bg-opacity-100 hidden sm:block"
-        aria-label="Next"
-      >
-        &#8594;
-      </button>
+        </div>
+      )}
     </div>
   );
 };

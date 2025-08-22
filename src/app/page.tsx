@@ -132,16 +132,30 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-4">
-              High-Quality Hand-Crafted Aritificial Rock Features
+              High-Quality Hand-Crafted Rock Features
             </h2>
             <p className="text-xl text-gray-600">
               We handcraft ultra-realistic artificial boulders that bring
               texture, depth, and bold design to your outdoor space—without the
-              back-breaking weight or maintenance of real stone. We bring
-              natural beauty and lasting value to homes, parks, and commercial
-              properties with our expertly crafted artificial rock landscaping
-              and installations that enhance outdoor spaces and stand the test
-              of time!
+              back-breaking weight or careful maneuvering of real stone. We
+              bring natural beauty and lasting value to homes, parks, and
+              commercial properties with our expertly crafted artificial rock
+              landscaping and installations that can be installed anywhere,
+              enhance outdoor spaces and stand the test of time!
+            </p>
+            <br />
+            <p className="text-xl text-gray-600">
+              From our humble beginnings in the Northern Drakensberg, IronRoot
+              RockCraft is growing into a trusted name for artificial rock
+              features across South Africa.
+            </p>
+            <br />
+            <p className="text-xl text-gray-600">
+              We travel to you! Contact us below.
+            </p>
+            <br />
+            <p className="text-xl text-gray-600">
+              Here are some of our most recent projects:
             </p>
           </div>
 
@@ -157,18 +171,8 @@ export default function Home() {
       {/* Footer Section */}
       <footer className="bg-gray-800 text-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">
-            Built with NextJS GitHub Markdown Blog
-          </p>
+          <p className="text-gray-400">Built with NextJS</p>
           <div className="flex justify-center space-x-4 mt-4">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white"
-            >
-              <FaGithub size={24} />
-            </a>
             <a
               href="https://facebook.com/IronRootRockCraft"
               target="_blank"
@@ -186,12 +190,12 @@ export default function Home() {
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
             >
-              <FaTwitter size={24} />
+              <FaGithub size={24} />
             </a>
           </div>
         </div>

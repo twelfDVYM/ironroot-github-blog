@@ -18,7 +18,7 @@ const Subscribe: React.FC = () => {
     <div className="bg-gradient-to-b from-[#a0522d] to-[#c68642]">
       <div className="max-w-3xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-extrabold text-white mb-8">
-          Ready to make your own rocks?
+          Ready to Rock?!
         </h2>
         <p className="text-xl text-blue-100 mb-10">
           Contact us to receive news, quotes, and updates about IronRoot

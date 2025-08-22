@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IronRoot RockCraft | Let's Rock!",
     description:
-      "A modern blog platform powered by Next.js and GitHub Markdown",
+      "IronRoot RockCraft producing high quality hand crafted ultra-realistic artificial rocks and rockfaces in the Northern Drakensberg and across South Africa.",
     url: "/",
     siteName: "IronRoot RockCraft",
     images: [
