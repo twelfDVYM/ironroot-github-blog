@@ -49,14 +49,12 @@ const ImageCarousel: React.FC = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "0px",
     arrows: true,
     swipe: true,
     touchMove: true,
     touchThreshold: 8,
     accessibility: true,
     focusOnSelect: true,
-    draggable: true,
     nextArrow: <Arrow direction="right" />,
     prevArrow: <Arrow direction="left" />,
     afterChange: (current: number) => setFocusedIdx(current),
@@ -91,7 +89,7 @@ const ImageCarousel: React.FC = () => {
                 width={600}
                 height={400}
                 className="object-cover w-full h-[400px] sm:h-[400px]"
-                //draggable={false}
+                draggable={false}
                 priority={idx < 3}
               />
             </div>
