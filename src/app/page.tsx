@@ -86,7 +86,7 @@ export default function Home() {
       <div className="relative overflow-hidden">
         <Image
           src="https://twelfDVYM.github.io/host/IronRoot2.jpg"
-          alt="Hero Background"
+          alt="IronRoot RockCraft"
           fill
           priority
           className="object-cover w-full h-full absolute inset-0 z-0"
@@ -132,19 +132,34 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-4">
-              High Quality Aritificial Rock Features
+              High-Quality Hand-Crafted Aritificial Rock Features
             </h2>
             <p className="text-xl text-gray-600">
-              We bring natural beauty and lasting value to homes, parks, and
-              commercial properties with our expertly crafted artificial rock
-              landscaping and installations that enhance outdoor spaces and
-              stand the test of time!
+              We handcraft ultra-realistic artificial boulders that bring
+              texture, depth, and bold design to your outdoor space—without the
+              back-breaking weight or maintenance of real stone. We bring
+              natural beauty and lasting value to homes, parks, and commercial
+              properties with our expertly crafted artificial rock landscaping
+              and installations that enhance outdoor spaces and stand the test
+              of time!
             </p>
           </div>
 
           {/* Image Carousel Section */}
           <div className="flex justify-center">
             <Carousel />
+          </div>
+
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="text-xl text-gray-600">
+              We handcraft ultra-realistic artificial boulders that bring
+              texture, depth, and bold design to your outdoor space—without the
+              back-breaking weight or maintenance of real stone. We bring
+              natural beauty and lasting value to homes, parks, and commercial
+              properties with our expertly crafted artificial rock landscaping
+              and installations that enhance outdoor spaces and stand the test
+              of time!
+            </p>
           </div>
         </div>
       </div>
@@ -167,7 +182,7 @@ export default function Home() {
               <FaGithub size={24} />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://facebook.com/IronRootRockCraft"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"

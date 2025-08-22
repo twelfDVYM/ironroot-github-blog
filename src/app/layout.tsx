@@ -9,22 +9,23 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://your-domain.com"), // Replace with your domain
   title: {
-    default: "Next.js GitHub Markdown Blog",
-    template: "%s | Next.js GitHub Markdown Blog",
+    default: "IronRoot RockCraft | Let's Rock!",
+    template: "%s | IronRoot Rockcraft",
   },
-  description: "A modern blog platform powered by Next.js and GitHub Markdown",
+  description:
+    "IronRoot RockCraft producing high quality hand crafted ultra-realistic artificial rocks and rockfaces.",
   openGraph: {
-    title: "Next.js GitHub Markdown Blog",
+    title: "IronRoot RockCraft | Let's Rock!",
     description:
       "A modern blog platform powered by Next.js and GitHub Markdown",
     url: "/",
-    siteName: "Next.js GitHub Markdown Blog",
+    siteName: "IronRoot RockCraft",
     images: [
       {
         url: "https://twelfDVYM.github.io/host/IronRootLogoWEB.jpg", // Add your own OG image
         width: 1200,
         height: 630,
-        alt: "Next.js GitHub Markdown Blog",
+        alt: "IronRoot RockCraft Logo",
       },
     ],
     locale: "en_US",
@@ -32,9 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js GitHub Markdown Blog",
-    description:
-      "A modern blog platform powered by Next.js and GitHub Markdown",
+    title: "IronRoot RockCraft",
+    description: "IronRoot RockCraft | Producer of articial rocks",
     images: ["/images/twitter-image.jpg"], // Add your own Twitter card image
   },
 };
